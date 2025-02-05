@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../../partials/cpanel/industrial/head'); %>
+
+<body class="vertical-layout">    
+   
+    <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/industrial/header'); %>
+           
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Notifications</h4>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+            
+            <!-- start history -->    
+            <div class="contentbar">
+                <!-- Start row -->
+                <div class="row">
+                                       
+                    <div class="col-lg-12">
+                        <div class="card m-b-30">
+                            <div class="card-header pb-0">
+                                <!-- <h5 class="card-title">Title</h5> -->
+                            </div>
+                            <div class="card-body">
+
+                                <div class="ecom-notification-box">
+                                    <ul class="list-unstyled">
+                                        <li class="media">
+                                            <span class="mr-3 action-icon badge badge-primary"><i class="ri-archive-line"></i></span>
+                                            <div class="media-body">
+                                                <h5 class="action-title">Found Buyer of your Waste!</h5>
+                                                <p class="my-3">We have got a buyer for your Waste. Click on the link below to schedule your pick up.</p>
+                                                <p class="my-3">To check live updates of your current scheduled please goto <a href="/cpanel/industrial/schedule">Schedule Menu</a> >> Current Status</p>
+                                                <p>Yesterday, 05:25 PM <a href="javascript:void(0)" data-toggle="modal" data-target=".schedule-form" class="btn-sm btn-primary float-right">Schedule Here</a></p>
+                                            </div>
+                                        </li>
+                                        <% for(i=0; i<data.length; i++) { %>
+                                        <li class="media">
+                                            <span class="mr-3 action-icon badge badge-success"><i class="ri-check-line"></i></span>
+                                            <div class="media-body">
+                                                    <h5 class="action-title">Found a Source</h5>
+                                                    <p class="my-3">We have credited payment amount to your respective account, kindly check Payment history section for receipt/invoice. In case of any problem feel free to contact us.</p>
+                                                    <p><%= data[i].DateTime %></p>
+                                                    <p><%= data[i].Types %></p>
+                                                    <p><%= data[i].Estimated_weight %></p>
+                                            </div>
+                                        </li>
+                                        <% }; %>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                                
+                                    
+
+                </div> <!-- End row -->
+            </div>
+            <!-- history End -->
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End Contentbar -->
+            <%- include('../../../partials/cpanel/industrial/footer'); %>
+
+    
+</body>
+
+</html>

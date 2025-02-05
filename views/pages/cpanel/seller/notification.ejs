@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../../partials/cpanel/seller/head'); %>
+
+<body class="vertical-layout">    
+   
+    <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/seller/header'); %>
+           
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Notifications</h4>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+            
+            <!-- start history -->    
+            <div class="contentbar">
+                <!-- Start row -->
+                <div class="row">
+                                       
+                    <div class="col-lg-12">
+                        <div class="card m-b-30">
+                            <div class="card-header pb-0">
+                                <!-- <h5 class="card-title">Title</h5> -->
+                            </div>
+                            <div class="card-body">
+
+                                <div class="ecom-notification-box">
+                                    <ul class="list-unstyled">
+                                        <li class="media">
+                                            <span class="mr-3 action-icon badge badge-primary"><i class="ri-archive-line"></i></span>
+                                            <div class="media-body">
+                                                <h5 class="action-title">Your Product is Out-off Stock</h5>
+                                                <p class="my-3">Your Product(Id-no. 010101) is Out-off Stock Increase your Stock</p>
+                                                <p class="my-3">To check your <a href="/cpanel/seller/product_list">product-list</a></p>
+                                                <p>Yesterday, 05:25 PM</p>
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <span class="mr-3 action-icon badge badge-success"><i class="ri-check-line"></i></span>
+                                            <div class="media-body">
+                                                <h5 class="action-title">Payment Success !!!</h5>
+                                                <p class="my-3">We have credited payment amount to your respective account, kindly check Payment history section for receipt/invoice. In case of any problem feel free to contact us.</p>
+                                                <p>Today, 09:39 PM</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                                
+                                    
+
+                </div> <!-- End row -->
+            </div>
+            <!-- history End -->
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End Contentbar -->
+            <%- include('../../../partials/cpanel/seller/footer'); %>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../../partials/cpanel/individual/head'); %>
+
+<body class="vertical-layout">    
+   
+    <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/individual/header'); %>
+
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Scheule Your Waste</h4>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="widgetbar">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target=".schedule-form" style="margin-left: 10px;" class="btn btn-primary float-right">Schedule</a>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target=".current-status" class="btn btn-primary float-right">Current Status</a>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+            
+            <!-- start history -->    
+            <div class="contentbar">
+                <!-- Start row -->
+                <div class="row">
+                                       
+                    <div class="col-lg-12">
+                        <div class="card m-b-30">
+                            <div class="card-header pb-0">
+                                <!-- <h5 class="card-title">Title</h5> -->
+                            </div>
+                            <div class="card-body">
+                                
+                                <div class="table-responsive">
+                                    <table id="schedule-table" class="display table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr No.</th>
+                                                <th>Address</th>
+                                                <th>Estimated Weight (kg):</th>
+                                                <th>Pick-up Date</th>
+                                                <th>Contact No.</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>936, Kiehn Route, West Ned, Tennessee, 11230</td>
+                                                <td>250</td>
+                                                <td>20/06/2023</td>
+                                                <td>0123456789</td>
+                                                <td>Pending</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jeromy Mayert, 4059, Carling Avenue, Ottawa, Ontario, K1Z7B</td>
+                                                <td>250</td>
+                                                <td>20/06/2023</td>
+                                                <td>0123456789</td>
+                                                <td>Pending</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>936, Kiehn Route, West Ned, Tennessee, 11230</td>
+                                                <td>250</td>
+                                                <td>20/06/2023</td>
+                                                <td>0123456789</td>
+                                                <td>Pending</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Jeromy Mayert, 4059, Carling Avenue, Ottawa, Ontario, K1Z7B</td>
+                                                <td>250</td>
+                                                <td>20/06/2023</td>
+                                                <td>0123456789</td>
+                                                <td>Pending</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                                
+                                    
+
+                </div> <!-- End row -->
+            </div>
+            <!-- history End -->
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End Contentbar -->
+            
+
+            <%- include('../../../partials/cpanel/recycler/footer'); %>
+
+            <!-- Current Status model -->
+            <div class="modal fade current-status" tabindex="-1" role="dialog" aria-hidden="true" >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleLargeModalLabel">Current Schedule Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Team is on it's way  for verification and pick up for your today's scheduled.</p>
+                                        <p>Verification Completed, Click on the link to download verification certificate for this pickup.</p>
+                                        <p>Vehicle dispatched from your location.</p>    
+                                        <p>Hii! There hope you are doing good. We have just transferred your payment for Pick Up I'd number "11111", please check in the payment section. If not received feel free to contact us.</p>
+                                    </div>
+                                </div>
+                        </div>                          
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+    <script>
+        $(document).ready(function() {
+            /* -- Table - Datatable -- */
+            
+            $('#schedule-table').DataTable( {
+                // "order": [[ 0, "desc" ]],
+                // lengthChange: false,
+                responsive: true
+            } );    
+        });
+    </script>
+</body>
+
+</html>

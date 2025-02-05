@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../../partials/cpanel/individual/head'); %>
+
+<body class="vertical-layout">    
+   
+    <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/individual/header'); %>
+        
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Submit Waste Requirement</h4>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+            
+            <!-- Submit Form -->    
+            <div class="contentbar">
+                <!-- Start row -->
+                <div class="row">
+                                        
+                    <div class="col-lg-12">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                               
+                                <form action="/waste_submit" method="post">
+                                    <!-- Start col -->
+                                    <div class="row">
+
+                                        <div class="col-12 col-md-6">
+                                            <label for="inputAddress">Total Weight (KG)</label>
+                                            <input type="number" class="form-control" id="inputAddress" placeholder="Enter Weight in KG">
+                                            <label for="inputAddress">Date Till when required</label>
+                                            <input type="date" class="form-control">
+
+                                            <div class="form-group">
+
+                                                <label for="inputAddress">Type of Waste Required</label>
+                                                <select multiple class="form-control" id="formControlSelectMultiple">
+                                                    <option>Plastic</option>
+                                                    <option>Metallic</option>
+                                                    <option>Wool</option>
+                                                    <option>Clothes</option>
+                                                    <option>Oil</option>
+                                                    <option>Glass</option>
+                                                    <option>Paper</option>
+                                                    <option>Electronic</option>
+                                                    <option>Chemical</option>
+                                                </select>
+                                                <style>
+                                                    select.form-control[multiple] {
+                                                        height: 84px;
+                                                    }
+                                                </style>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="inputAddress">Selected Waste</label>
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="Selected Waste">
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label for="notes">Review/Specifications</label>
+                                                        <textarea rows="6" class="form-control" id="notes" placeholder="Add Specifications"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Hidden input fields for latitude, longitude, and submission time -->
+                                        <input type="hidden" id="latitude" name="latitude">
+                                        <input type="hidden" id="longitude" name="longitude">
+                                        <input type="hidden" id="submissionTime" name="submissionTime">
+
+                                        <!-- Submit button for the form -->
+                                        <button type="submit" class="btn btn-primary">Submit Data</button>
+                                                            
+                                </form>
+                            </div>
+                        </div>
+                    </div>          
+
+                </div> <!-- End row -->
+            </div>
+            <!-- Submit Form End -->
+
+            <%- include('../../../partials/cpanel/recycler/footer'); %>
+      
+    <!-- selcect and search functiolnality -->
+    <script>   
+        const wasteDropdown = document.getElementById("formControlSelectMultiple");
+        const searchInput = document.getElementById("inputAddress");
+        searchInput.addEventListener("input", filterWasteTypes);
+    
+        function filterWasteTypes() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const options = wasteDropdown.options;
+    
+            for (let i = 0; i < options.length; i++) {
+                const optionText = options[i].text.toLowerCase();
+    
+                if (optionText.includes(searchTerm)) {
+                    options[i].style.display = "block";
+                } else {
+                    options[i].style.display = "none";
+                }
+            }
+        }
+        const getLocationButton = document.getElementById("getLocationButton");
+    const submissionTimeField = document.getElementById("submissionTime");
+    const latitudeField = document.getElementById("latitude");
+    const longitudeField = document.getElementById("longitude");
+    const form = document.querySelector("form");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(sendLocationToServer, showError);
+        } else {
+            locationResult.textContent = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function sendLocationToServer(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        // Set latitude and longitude in hidden input fields
+        latitudeField.value = latitude;
+        longitudeField.value = longitude;
+
+        // Get current date and time
+        const currentDate = new Date();
+        const formattedDate = currentDate.toISOString(); // UTC time string
+
+        // Set submission time in hidden input field
+        submissionTimeField.value = formattedDate;
+
+        // Submit the form
+        form.submit();
+    }
+
+    function showError(error) {
+        // Handle geolocation errors
+        // ...
+    }
+
+    getLocationButton.addEventListener("click", getLocation);
+
+    
+    </script>
+
+</body>
+
+</html>

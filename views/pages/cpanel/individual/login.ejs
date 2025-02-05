@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../../partials/cpanel/individual/head'); %>
+
+<body class="vertical-layout">
+    <!-- Start Containerbar -->
+    <div id="containerbar" class="containerbar authenticate-bg overlay">
+        <!-- Start Container -->
+        <div class="container">
+            <div class="auth-box login-box">
+                <!-- Start row -->
+                <div class="row no-gutters align-items-center justify-content-center">
+                    <!-- Start col -->
+                    <div class="col-md-6 col-lg-5">
+                        <!-- Start Auth Box -->
+                        <div class="auth-box-right">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="/industrial_login" method="post">
+                                        <div class="form-head">
+                                            <a href="/cpanel/industrial/index" class="logo"><img src="/assets/images/logo.svg" class="img-fluid" alt="logo"></a>
+                                        </div>     
+                                                                         
+                                        <h4 class="text-primary my-4"><b>Industrial</b> Log in Here!</h4>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="username" placeholder="Email ID" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                        </div>
+
+                                      <a href="/cpanel/individual" type="submit" class="btn btn-primary btn-lg btn-block font-18">Log in</a>
+                                    </form>
+                                    <div class="col-sm-12 mt-2">
+                                        <div class="forgot-psw text-center"> 
+                                          <a id="forgot-psw" href="/cpanel/industrial/forgotpsw" class="font-14">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="login-or">
+                                        <h6 class="text-muted">OR</h6>
+                                    </div>
+                                    <p class="mb-0 mt-3">Don't have a account? <a href="/cpanel/industrial/register">Sign up</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End row -->
+            </div>
+        </div>
+        <!-- End Container -->
+    </div>
+    <!-- End Containerbar -->
+    <!-- Start js -->        
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <script src="/assets/js/detect.js"></script>
+    <script src="/assets/js/jquery.slimscroll.js"></script>
+    <!-- End js -->
+</body>
+
+</html>

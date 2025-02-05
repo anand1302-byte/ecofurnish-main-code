@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../../partials/cpanel/domestic/head'); %>
+
+<body class="vertical-layout">
+    <!-- Start Containerbar -->
+    <div id="containerbar" class="containerbar authenticate-bg">
+        <!-- Start Container -->
+        <div class="container">
+            <div class="auth-box register-box">
+                <!-- Start row -->
+                <div class="row no-gutters align-items-center justify-content-center">
+                    <!-- Start col -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="auth-box-right">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="/domestic_register" method="post">
+                                        <div class="form-head">
+                                            <a href="/index" class="logo"><img src="/assets/images/logo.svg" class="img-fluid" alt="logo"></a>
+                                        </div> 
+                                        <h4 class="text-primary my-4">Register Here!</h4>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email ID" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" name="confirmpassword" id="confirmpassword" placeholder="Re-Type Password" required>
+                                        </div>
+                                        <div class="form-row mb-3">
+                                            <div class="col-sm-12">
+                                                <div class="custom-control custom-checkbox text-left">
+                                                    <input type="checkbox" class="custom-control-input" id="terms">
+                                                    <label class="custom-control-label font-14" for="terms">I Agree to Terms & Conditions of Eco-Furnish</label>
+                                                </div>                                
+                                            </div>
+                                        </div>                          
+                                      <button type="submit" class="btn btn-primary btn-lg btn-block font-18">Register</button>
+                                    </form>
+                                    <p class="mb-0 mt-3">Already have an account? <a href="/cpanel/domestic/login">Log in</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End row -->
+            </div>
+        </div>
+        <!-- End Container -->
+    </div>
+    <!-- End Containerbar -->
+    <!-- Start js -->        
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <script src="/assets/js/detect.js"></script>
+    <script src="/assets/js/jquery.slimscroll.js"></script>
+    <!-- End js -->
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<%- include('../../../partials/cpanel/domestic/head'); %>
+
+<body class="vertical-layout">    
+    <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/domestic/header'); %>
+
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Domestic Waste Submission</h4>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+          <!-- Start Contentbar -->    
+          <div class="contentbar">                
+            <!-- Start row -->
+            <div class="row">
+                <!-- Start col -->
+                <div class="col-lg-12">
+                    <div class="card m-b-30">
+                        <div class="card-header">
+                            <h5 class="card-title">Request Submitted</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4">
+                                    <div class="thankyou-content text-center my-5">
+                                        <img src="/assets/images/ecommerce/thankyou.svg" class="img-fluid mb-5" alt="thankyou">
+                                        <h2 class="text-success">Thank You !!!</h2>
+                                        <p class="my-4">Your Request has been successfully placed. Your Request ID is #O2101</p>
+                                        <div class="button-list">
+                                            <a href="/cpanel/domestic/status_history" type="button" class="btn btn-primary-rgba font-16"><i class="ri-map-pin-2-line mr-2"></i>Track Request</a>
+                                            <button type="button" class="btn btn-success font-16"><i class="ri-file-text-line mr-2"></i>View Invoice</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <!-- End col -->
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End Contentbar -->
+            <%- include('../../../partials/cpanel/domestic/footer'); %>
+            <script>
+                function submitForm() {
+                  document.getElementById('myForm').submit();
+                }
+              </script>
+
+</body>
+
+</html>

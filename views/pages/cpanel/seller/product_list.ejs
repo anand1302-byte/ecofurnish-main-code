@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<%- include('../../../partials/cpanel/seller/head'); %>
+
+<body class="vertical-layout">    
+   
+             <!-- Start Contentbar --> 
+
+               
+                 <%- include('../../../partials/cpanel/seller/header'); %>   
+             <div class="contentbar">                
+                <!-- Start row -->
+                <div class="row" style="padding-top: 85px;">
+                    <!-- Start col -->
+                    <div class="col-lg-12">
+                        <div class="card m-b-30">
+                            <div class="card-header">                                
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <h5 class="card-title mb-0">All Products</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-inline-group text-right mb-0 pl-0">
+                                            <li class="list-inline-item">
+                                                  <div class="form-group mb-0 amount-spent-select">
+                                                    <select class="form-control" id="formControlSelect">
+                                                      <option>All</option>
+                                                      <option>Last Week</option>
+                                                      <option>Last Month</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                        </ul>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Stock</th>
+                                                <th>Price</th>
+                                                <th>Categories</th>
+                                                <th>Tags</th>
+                                                <th>Orders</th>
+                                                <th>Date Added</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">#1</th>
+                                               <td>Recycled Pots</td>
+                                                <td class="text-success">In Stock</td>
+                                                <td>&#8377;149.00</td>
+                                                <td>Gardening</td>
+                                                <td><span class="badge badge-secondary-inverse mr-2">Gardening</span><span class="badge badge-secondary-inverse">Popular</span></td>
+                                                <td>180</td>
+                                                <td>01/04/2023</td>
+                                                <td>
+                                                    <div class="button-list">
+                                                        <a href="#" class="btn btn-success-rgba"><i class="ri-pencil-line"></i></a>
+                                                        <a href="#" class="btn btn-danger-rgba"><i class="ri-delete-bin-3-line"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">#2</th>
+                                                <td>Poly Toys</td>
+                                                <td class="text-danger">Out of Stock</td>
+                                                <td>&#8377; 62.00</td>
+                                                <td>Toys</td>
+                                                <td><span class="badge badge-secondary-inverse mr-2">Poly</span>
+                                                <td>525</td>
+                                                <td>28/03/2023</td>
+                                                <td>
+                                                    <div class="button-list">
+                                                        <a href="#" class="btn btn-success-rgba"><i class="ri-pencil-line"></i></a>
+                                                        <a href="#" class="btn btn-danger-rgba"><i class="ri-delete-bin-3-line"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">#3</th>
+                                                <td>DIY Jhumar</td>
+                                                <td class="text-success">In Stock</td>
+                                                <td>&#8377; 75.00</td>
+                                                <td>DIY</td>
+                                                <td><span class="badge badge-secondary-inverse mr-2">Pupular</span><span class="badge badge-secondary-inverse">Luxury</span></td>
+                                                <td>991</td>
+                                                <td>22/03/2020</td>
+                                                <td>
+                                                    <div class="button-list">
+                                                        <a href="#" class="btn btn-success-rgba"><i class="ri-pencil-line"></i></a>
+                                                        <a href="#" class="btn btn-danger-rgba"><i class="ri-delete-bin-3-line"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">#4</th>
+                                                 <td>Cardboard Lamp</td>
+                                                <td class="text-success">In Stock</td>
+                                                <td>&#8377; 78.00</td>
+                                                <td>Accessories</td>
+                                                <td><span class="badge badge-secondary-inverse mr-2">DIY</span><span class="badge badge-secondary-inverse">Plastoc Free</span></td>
+                                                <td>630</td>
+                                                <td>18/03/2023</td>
+                                                <td>
+                                                    <div class="button-list">
+                                                        <a href="#" class="btn btn-success-rgba"><i class="ri-pencil-line"></i></a>
+                                                        <a href="#" class="btn btn-danger-rgba"><i class="ri-delete-bin-3-line"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">#5</th>
+                                                 <td>Recycled Pencil</td>
+                                                <td class="text-danger">Out of Stock</td>
+                                                <td>&#8377; 150.00</td>
+                                                <td>Accessories</td>
+                                                <td><span class="badge badge-secondary-inverse mr-2">Eco-Friendly</span><span class="badge badge-secondary-inverse">New</span></td>
+                                                <td>710</td>
+                                                <td>11/03/2023</td>
+                                                <td>
+                                                    <div class="button-list">
+                                                        <a href="#" class="btn btn-success-rgba"><i class="ri-pencil-line"></i></a>
+                                                        <a href="#" class="btn btn-danger-rgba"><i class="ri-delete-bin-3-line"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">#6</th>
+                                                 <td>Recycled Ornaments</td>
+                                                <td class="text-success">In Stock</td>
+                                                <td>&#8377; 152.00</td>
+                                                <td>Luxury</td>
+                                                <td><span class="badge badge-secondary-inverse mr-2">Eco-Friendly</span><span class="badge badge-secondary-inverse">Sale</span></td>
+                                                <td>480</td>
+                                                <td>03/03/2023</td>
+                                                <td>
+                                                    <div class="button-list">
+                                                        <a href="#" class="btn btn-success-rgba"><i class="ri-pencil-line"></i></a>
+                                                        <a href="#" class="btn btn-danger-rgba"><i class="ri-delete-bin-3-line"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">#7</th>
+                                                  <td>DIY Showpiece</td>
+                                                <td class="text-success">In Stock</td>
+                                                <td>&#8377; 149.00</td>
+                                                <td>Home Decor</td>
+                                                <td><span class="badge badge-secondary-inverse mr-2">Latest</span><span class="badge badge-secondary-inverse">New</span></td>
+                                                <td>223</td>
+                                                <td>27/02/2023</td>
+                                                <td>
+                                                    <div class="button-list">
+                                                        <a href="#" class="btn btn-success-rgba"><i class="ri-pencil-line"></i></a>
+                                                        <a href="#" class="btn btn-danger-rgba"><i class="ri-delete-bin-3-line"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End Contentbar -->
+            <%- include('../../../partials/cpanel/seller/footer'); %>
+</body>
+
+</html>

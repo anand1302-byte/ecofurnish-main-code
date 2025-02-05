@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../../partials/cpanel/individual/head'); %>
+
+<body class="vertical-layout">    
+    <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/individual/header'); %>
+
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row ">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Account Details</h4>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+            <!-- Start Contentbar -->    
+            <div class="contentbar row">   
+                <!-- Start row -->
+                <!-- Start col -->
+                <div class="col-lg-12">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-6">
+                                        <label>Industry Name</label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="inputText" id="Industry name" placeholder="Industry name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <label>Type Of Industry</label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="inputText" id="Industry name" placeholder="Industry name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                
+
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="inputEmail4">Phone No.</label>
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control" name="inputTel" id="inputPno" placeholder="+91 9816415263">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="inputCity">Industry License</label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="inputLicense" placeholder="123456789">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-md-6">
+                                        <label for="inputEmail4">Industry Registration No.</label>
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control" name="inputTel" id="inputLno"placeholder="123456789">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="inputAddress">Your Address</label>
+                                            <textarea rows="4" class="form-control" id="inputAddress" placeholder="Enter Address"></textarea>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Edit Account Details</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- End col -->
+            <!-- End Contentbar -->
+                 <!-- End Contentbar -->
+                 <%- include('../../../partials/cpanel/individual/footer'); %>
+    </body>
+                
+</html>

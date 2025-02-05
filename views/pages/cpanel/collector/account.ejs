@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../../../partials/cpanel/collector/head'); %>
+
+<body class="vertical-layout">    
+    <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/collector/header'); %>
+
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row ">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Account Details</h4>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+            <!-- Start Contentbar -->    
+            <div class="contentbar row">   
+                <!-- Start row -->
+                    <!-- Start col -->
+                    <div class="col-lg-5 col-xl-3">
+                        <div class="card m-b-30">
+                            <div class="card-header">                                
+                                <h5 class="card-title mb-0">My Account</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <a class="nav-link mb-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="ri-user-settings-line mr-2"></i>My Profile</a>
+                                    <a class="nav-link text-danger" id="v-pills-logout-tab" data-toggle="pill" href="#v-pills-logout" role="tab" aria-controls="v-pills-logout" aria-selected="false"><i class="ri-shut-down-line mr-2"></i>Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                <!-- Start col -->
+                <div class="col-lg-7 col-xl-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+
+                        <!-- Dashboard Start -->
+                        <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="card m-b-30">
+                                <div class="card-header">                                
+                                    <h5 class="card-title mb-0">My Profile</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="profilebox pt-4 text-center">
+                                        <ul class="list-inline">
+                                           
+                                            <li class="list-inline-item">
+                                                <img src="/assets/images/users/profile.svg" class="img-fluid" alt="profile">
+                                            </li>
+                                            
+                                        </ul>
+                                        <div class="profilename">
+                                            <h5>Hitesh Nagar</h5>
+                                        </div>
+                                    </div>
+                                         
+                                </div>
+                            </div>
+                            <div class="card m-b-30">
+                                <div class="card-header">                                
+                                    <h5 class="card-title mb-0">Edit Profile Informations</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" id="username">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="useremail">Email</label>
+                                                <input type="email" class="form-control" id="useremail">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="usermobile">Mobile Number</label>
+                                                <input type="text" class="form-control" id="usermobile">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="userbirthdate">Date of Birth</label>
+                                                <input type="date" class="form-control" id="userbirthdate">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="userpassword">Password</label>
+                                                <input type="password" class="form-control" id="userpassword">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="userconfirmedpassword">Confirmed Password</label>
+                                                <input type="password" class="form-control" id="userconfirmedpassword">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="usermale" name="usergender" class="custom-control-input" checked>
+                                                <label class="custom-control-label" for="usermale">Male</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="userfemale" name="usergender" class="custom-control-input">
+                                                <label class="custom-control-label" for="userfemale">Female</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary-rgba font-16"><i class="ri-save-line mr-2"></i>Update</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dashboard End -->
+                        
+                       
+                        <!-- My Profile Start -->
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                          
+                        <!-- My Profile End -->
+                        <!-- My Logout Start -->
+                        <div class="tab-pane fade" id="v-pills-logout" role="tabpanel" aria-labelledby="v-pills-logout-tab">
+                            <div class="card m-b-30">
+                                <div class="card-header">                                
+                                    <a href="/cpanel/collector/login" class="card-title mb-0">Logout</a>                                       
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <!-- My Logout End -->                            
+                    </div>                        
+                </div>
+                <!-- End col -->
+            </div>
+            <!-- End row -->   
+
+               
+            <!-- End Contentbar -->
+                 <!-- End Contentbar -->
+                 <%- include('../../../partials/cpanel/collector/footer'); %>
+    </body>
+                
+</html>

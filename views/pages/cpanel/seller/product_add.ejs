@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<%- include('../../../partials/cpanel/seller/head'); %>
+
+<body class="vertical-layout">    
+   
+    <div id="containerbar">
+             <!-- Start Contentbar --> 
+
+             <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/seller/header'); %>
+
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row ">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Account Details</h4>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+
+             <div class="contentbar">
+             
+                <!-- Start row -->
+                <div class="row">
+                    <!-- Start col -->
+                    <div class="col-lg-8 col-xl-9">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Product Detail</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group row">
+                                        <label for="productTitle" class="col-sm-12 col-form-label">Product Title</label>
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control font-20" id="productTitle" placeholder="Title">
+                                        </div>
+                                    </div>                                     
+                                    <div class="form-group row">
+                                        <label class="col-sm-12 col-form-label">Description</label>
+                                        <div class="col-sm-12">
+                                            <div class="summernote">This is product description.</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Other Detail</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-4">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <div class="nav flex-column nav-pills" id="v-pills-product-tab" role="tablist" aria-orientation="vertical">
+                                            <a class="nav-link mb-2 active" id="v-pills-general-tab" data-toggle="pill" href="#v-pills-general" role="tab" aria-controls="v-pills-general" aria-selected="true"><i class="ri-remixicon-line mr-2"></i>General</a>
+                                            <a class="nav-link mb-2" id="v-pills-stock-tab" data-toggle="pill" href="#v-pills-stock" role="tab" aria-controls="v-pills-stock" aria-selected="false"><i class="ri-dropbox-line mr-2"></i>Stock</a>
+                                            <a class="nav-link mb-2" id="v-pills-shipping-tab" data-toggle="pill" href="#v-pills-shipping" role="tab" aria-controls="v-pills-shipping" aria-selected="false"><i class="ri-truck-line mr-2"></i>Shipping</a>
+                                            <a class="nav-link mb-2" id="v-pills-advanced-tab" data-toggle="pill" href="#v-pills-advanced" role="tab" aria-controls="v-pills-advanced" aria-selected="false"><i class="ri-settings-3-line mr-2"></i>Advanced</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-8">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <div class="tab-content" id="v-pills-product-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab">
+                                                <form>
+                                                    <div class="form-group row">
+                                                        <label for="regularPrice" class="col-sm-4 col-form-label">Price(&#8377;)</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="regularPrice" placeholder="100">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row mb-0">
+                                                        <label for="salePrice" class="col-sm-4 col-form-label">Sale Price(&#8377;)</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="salePrice" placeholder="50">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-stock" role="tabpanel" aria-labelledby="v-pills-stock-tab">
+                                                <form>
+                                                    <div class="form-group row">
+                                                        <label for="sku" class="col-sm-4 col-form-label">SKU</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="sku" placeholder="SKU001">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="stockStatus" class="col-sm-4 col-form-label">Stock Status</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control" id="stockStatus">
+                                                                <option value="instock">In Stock</option>
+                                                                <option value="outofstock">Out of Stock</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row mb-0">
+                                                        <label for="stockQuantity" class="col-sm-4 col-form-label">Quantity</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="stockQuantity" placeholder="100">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-shipping" role="tabpanel" aria-labelledby="v-pills-shipping-tab">
+                                                <form>
+                                                    <div class="form-group row">
+                                                        <label for="weight" class="col-sm-4 col-form-label">Weight(kg)</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="weight" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row mb-0">
+                                                        <label for="shippingClass" class="col-sm-4 col-form-label">Shipping Class</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control" id="shippingClass">
+                                                                <option value="noshipping">No Shipping</option>
+                                                                <option value="freeshipping">Free Shipping</option>
+                                                                <option value="fixedshiping">Fixed Shipping</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-advanced" role="tabpanel" aria-labelledby="v-pills-advanced-tab">
+                                                <form>
+                                                    <div class="form-group row mb-0">
+                                                        <label for="purchaseNote" class="col-sm-3 col-form-label">Purchase note</label>
+                                                        <div class="col-sm-9">
+                                                            <textarea class="form-control" name="purchaseNote" id="purchaseNote" rows="3" placeholder="Purchase note"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-8">
+                                <button type="submit" class="btn btn-primary">Add Product</button>
+    
+                                </div>
+                            </div>
+                        </div>                  
+                    </div>
+                    <!-- End col -->
+                    <!-- Start col -->
+                    <div class="col-lg-4 col-xl-3">
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Categories</h5>
+                            </div>
+                            <div class="card-body">
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="accessories" checked>
+                                    <label class="custom-control-label" for="accessories">Accessories</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="home-decor" >
+                                    <label class="custom-control-label" for="home-decor">Home Decor</label>
+                                </div>
+                               
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="gardening">
+                                    <label class="custom-control-label" for="gardening">Gardening</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="clothes">
+                                    <label class="custom-control-label" for="clothes">Clothes</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="luxury">
+                                    <label class="custom-control-label" for="luxury">Luxury</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Tags</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-tags">
+                                    <span class="badge badge-secondary-inverse">DIY</span>
+                                    <span class="badge badge-secondary-inverse">Eco-Friendly</span>
+                                    <span class="badge badge-secondary-inverse">No Plastic</span>
+                                    <span class="badge badge-secondary-inverse">Discount</span>
+                                    <span class="badge badge-secondary-inverse">Sale</span>
+                                </div>                                
+                            </div>
+                            <div class="card-footer">
+                                <div class="add-product-tags">
+                                    <form>
+                                        <div class="input-group">
+                                          <input type="search" class="form-control" placeholder="Add Tags" aria-label="Search" aria-describedby="button-addonTags">
+                                          <div class="input-group-append">
+                                            <button class="input-group-text" type="submit" id="button-addonTags">Add</button>
+                                          </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card m-b-30">
+                            <div class="card-header">
+                                <h5 class="card-title">Product Image Gallery</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-inline-block mb-1">
+                                    <img src="/assest/images/ecommerce/product_gallery_01.jpg" alt="Rounded Image" class="img-fluid rounded">
+                                </div>
+                                <div class="d-inline-block mb-1">
+                                    <img src="/assest/images/ecommerce/product_gallery_02.jpg" alt="Rounded Image" class="img-fluid rounded">
+                                </div>
+                                <div class="d-inline-block mb-1">
+                                    <img src="/assest/images/ecommerce/product_gallery_03.jpg" alt="Rounded Image" class="img-fluid rounded">
+                                </div>                                
+                            </div>
+                            <div class="card-footer">
+                                
+                                <button type="button" class="btn btn-primary-rgba btn-lg btn-block"><input class="file-input" type="file" multiple accept="image/*">Add More Images</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End row -->
+            </div>
+            <!-- End Contentbar -->
+            <%- include('../../../partials/cpanel/seller/footer'); %>
+        
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+<div class="body-wrapper">
+    
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+
+<!-- Body main wrapper start -->
+<div class="body-wrapper">
+    <!-- LOGIN AREA START -->
+    <div class="ltn__login-area pt-50 pb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area text-center">   
+                        <h1 class="section-title">SIGN IN</h1>
+                        <p> Sign in to access your personalized experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="account-login-inner">
+                        <form action="/login" class="ltn__form-box contact-form-box" method="post">
+                            <input type="text" name="email" id="email" placeholder="Email*">
+                            <input type="password" name="password" id="password" placeholder="Password*">
+                            
+                            <style>
+                                .nice-select{
+                                    padding-right: 40px;
+                                    height: 65px;  
+                                    background-color: var(--white);
+                                    border: 2px solid;
+                                    border-color: var(--border-color-9);
+                                    color: var(--ltn__paragraph-color);
+                                    padding-left: 20px;
+                                    line-height: 65px;
+                                }
+                            </style>
+                            
+                            <!-- <label for="Role">Choose a Role:</label><br>
+                                <select id="Roles" name="Roles">
+                                    <option value="User">User</option>
+                                     <option value="Industrial">Industrial</option>
+                                     <option value="Individual">Individual</option>
+                                     <option value="Recycler">Recycler</option>
+                                     <option value="Admin">Admin</option>
+                                     
+                                </select>
+                                 -->
+                                <label for="I accept the Terms and Conditions"><input style="width: 25px; -webkit-user-select: none; -ms-user-select: none; user-select: none;" type="checkbox" id="I accept the Terms and Conditions" name="I accept the Terms and Conditions" value="I accept the Terms and Conditions">&nbsp;I Accept The <a href="#"> Terms and Conditions</a>
+                            <div class="btn-wrapper mt-0"><br>
+                                <button class="theme-btn-1 btn btn-block" type="submit">SIGN IN</button>
+                            </div>
+                            <div class="go-to-btn mt-20">
+                                <a href="#"><small>FORGOT PASSWORD?</small></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="account-create text-center pt-50">
+                        <h4>DON'T HAVE AN ACCOUNT?</h4>
+                        <br>Ready to embark on your eco-friendly journey?</br> Join us today and start making a difference</p>
+                        <div class="btn-wrapper">
+                            <a href="/register" class="theme-btn-1 btn black-btn">CREATE ACCOUNT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGIN AREA END -->
+    </div>
+
+    <%- include('../partials/footer'); %>
+    
+</body>
+
+</html>
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<%- include('../../../partials/cpanel/domestic/head'); %>
+
+
+<body class="vertical-layout">    
+    <!-- Start Containerbar -->
+    <div id="containerbar">
+        <!-- Start Leftbar -->
+        <%- include('../../../partials/cpanel/domestic/header'); %>
+
+        <style>
+            /* -----------------progress bar-----------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+    /* font-family: {'Open Sans',serif}; */
+    .container{margin-top:50px;
+        margin-bottom: 50px}
+        .card{position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0.10rem}
+            .card-header:first-child{border-radius: calc(0.37rem - 1px) calc(0.37rem - 1px) 0 0}
+            .card-header{padding: 0.75rem 1.25rem;
+                margin-bottom: 0;
+                background-color: #fff;border-bottom: 1px solid rgba(0, 0, 0, 0.1)}.track{position: relative;background-color: #ddd;height: 7px;display: -webkit-box;display: -ms-flexbox;display: flex;margin-bottom: 60px;margin-top: 50px}.track .step{-webkit-box-flex: 1;-ms-flex-positive: 1;flex-grow: 1;width: 25%;margin-top: -18px;text-align: center;position: relative}
+                .track .step.active:before{background: #3bb78f}
+                .track .step::before{height: 7px;position: absolute;content: "";
+                width: 100%;left: 0;top: 18px}
+                .track .step.active .icon{background: #3bb78f;color: #fff}
+                .track .icon{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    position: relative;
+                    border-radius: 100%;
+                    background: #ddd
+                }
+                    .track .step.active .text{
+                        font-weight: 400;
+                        color: #000
+                    }
+                    
+                    .track .text{
+                        display: block;
+                        margin-top: 7px
+                    }
+                   
+                   
+                       
+                        
+                        
+        </style>
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-8">
+                        <h4 class="page-title">Schedule History</h4>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+            <!-- Start Contentbar -->    
+            <div class="contentbar">   
+                <!-- Start row -->
+                <div class="row"> 
+                    <div class="col-12">
+                        <div class="card m-b-30">
+                            
+                               
+                                    <header class="card-header"> Tracking </header>
+                                    <div class="card-body">
+                                        <h6>Schedule ID: OD45345345435</h6>
+                                        <article class="card">
+                                            <div class="card-body row">
+                                                <div class="col"> <strong>Pickup Time:</strong> <br>29 nov 2030 </div>
+                                                <div class="col"> <strong>Collector Details:</strong> <br> Amritas, | <i class="fa fa-phone"></i> +91 XXXXXXXXXX </div>
+                                                <div class="col"> <strong>Status:</strong> <br>Collector Asigned</div>
+                              
+                                            </div>
+                                        </article>
+                                        <div class="track">
+                                            <div class="step active"> <span class="icon"> <i class="fa fa-send"></i> </span> <span class="text">Pickup Scheduled</span> </div>
+                                            <div class="step active"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> Collector Asigned</span> </div>
+                                            <div class="step"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
+                                            <div class="step"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Scrapt Collected</span> </div>
+                                            <div class="step"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Payment Credited</span> </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <hr>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+                <!-- End row -->
+            </div> 
+     </div>
+                   
+                   
+            <!-- End Contentbar -->
+            <%- include('../../../partials/cpanel/domestic/footer'); %>
+
+</body>
+
+</html>
